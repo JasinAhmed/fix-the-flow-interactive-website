@@ -1,0 +1,87 @@
+/* ====== BASIS OPMAAK ====== */
+body {
+    margin: 0;
+    padding: 1rem;
+    font-family: Arial, sans-serif;
+}
+
+.header-main {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.site-title a {
+    text-decoration: none;
+    color: #000;
+    font-size: 1.6rem;
+}
+
+/* ====== MOBIEL-FIRST ====== */
+
+/* Hamburger zichtbaar op mobiel */
+.hamburger {
+    font-size: 2rem;
+    padding: .4em .6em;
+    cursor: pointer;
+    border: 1px solid #000;
+    border-radius: 5px;
+}
+
+/* Menu standaard VERBORGEN */
+.navList {
+    display: none;
+    position: absolute;
+    top: 60px;
+    left: 1rem;
+    right: 1rem;
+    background: #fff;
+    padding: 1rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,.1);
+}
+
+.navList ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.navList li + li {
+    margin-top: .5rem;
+}
+
+.navList a {
+    text-decoration: none;
+    color: #000;
+}
+
+/* CLASS DIE JS TOEVOGT */
+.navList.open {
+    display: block;
+}
+
+/* ====== DESKTOP WEERGAVE ====== */
+@media (min-width: 768px) {
+
+    .hamburger {
+        display: none;
+    }
+
+    .navList {
+        display: block;
+        position: static;
+        box-shadow: none;
+        padding: 0;
+        background: none;
+    }
+
+    .navList ul {
+        display: flex;
+        gap: 1rem;
+    }
+
+    .navList li + li {
+        margin-top: 0;
+    }
+}
