@@ -1,4 +1,4 @@
-/* ====== BASIS OPMAAK ====== */
+
 body {
     margin: 0;
     padding: 1rem;
@@ -17,7 +17,6 @@ body {
     font-size: 1.6rem;
 }
 
-/* ====== MOBIEL-FIRST ====== */
 
 /* Hamburger zichtbaar op mobiel */
 .hamburger {
@@ -28,7 +27,7 @@ body {
     border-radius: 5px;
 }
 
-/* Menu standaard VERBORGEN */
+
 .navList {
     display: none;
     position: absolute;
@@ -56,12 +55,12 @@ body {
     color: #000;
 }
 
-/* CLASS DIE JS TOEVOGT */
+
 .navList.open {
     display: block;
 }
 
-/* ====== DESKTOP WEERGAVE ====== */
+
 @media (min-width: 768px) {
 
     .hamburger {

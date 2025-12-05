@@ -5,7 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Buurtcampuskrant</title>
 
-    <!-- JOUW CSS -->
+    <!-- HUISSTIJL VAN DE STYLEGUIDE -->
+    <link rel="stylesheet" href="https://toasterbath0758.github.io/look-and-feel-styleguide-BCK/styleguide-buurtcampuskrant.css">
+
+    <!-- JOUW EIGEN CSS -->
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -16,20 +19,17 @@
         <a href="index.html">Buurtcampuskrant</a>
     </h1>
 
-    <button class="hamburger" aria-label="Open navigatie">
-        ☰
-    </button>
+    <button class="hamburger">☰</button>
 
     <nav class="navList">
-        <ul>
-            <li><a href="zuidoost.html">Zuidoost</a></li>
-            <li><a href="oost.html">Oost</a></li>
-            <li><a href="nieuw-west.html">Nieuw-West</a></li>
+        <ul id="navList">
+            <li><a class="navKnop" href="zuidoost.html">Zuidoost</a></li>
+            <li><a class="navKnop" href="oost.html">Oost</a></li>
+            <li><a class="navKnop" href="nieuw-west.html">Nieuw-West</a></li>
         </ul>
     </nav>
 
 </header>
-
 
 <script src="script.js"></script>
 </body>
