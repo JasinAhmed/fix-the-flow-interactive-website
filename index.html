@@ -5,31 +5,77 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Buurtcampuskrant</title>
 
-    <!-- HUISSTIJL VAN DE STYLEGUIDE -->
+    <!-- STYLEGUIDE -->
     <link rel="stylesheet" href="https://toasterbath0758.github.io/look-and-feel-styleguide-BCK/styleguide-buurtcampuskrant.css">
 
-    <!-- JOUW EIGEN CSS -->
+    <!-- JOUW CSS -->
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
+<!-- ======================= HEADER ======================= -->
 <header class="header-main">
 
     <h1 class="site-title">
         <a href="index.html">Buurtcampuskrant</a>
     </h1>
 
-    <button class="hamburger">☰</button>
+    <!-- HAMBURGER BUTTON -->
+    <button class="hamburger" aria-label="Open navigatie">☰</button>
 
     <nav class="navList">
         <ul id="navList">
-            <li><a class="navKnop" href="zuidoost.html">Zuidoost</a></li>
-            <li><a class="navKnop" href="oost.html">Oost</a></li>
-            <li><a class="navKnop" href="nieuw-west.html">Nieuw-West</a></li>
+            <li><a class="navKnop font-size-l" href="zuidoost.html">Zuidoost</a></li>
+            <li><a class="navKnop font-size-l" href="oost.html">Oost</a></li>
+            <li><a class="navKnop font-size-l" href="nieuw-west.html">Nieuw-West</a></li>
         </ul>
     </nav>
 
 </header>
+
+
+<!-- ======================= MAIN ======================= -->
+<main>
+
+<section class="news-and-form">
+
+    <!-- NIEUWS TITEL + ARCHIEF -->
+    <div class="news-header">
+        <h2 class="font-size-xl">Nieuws</h2>
+        <a href="#" class="archief-btn">Archief</a>
+    </div>
+
+    <!-- NIEUWS GRID -->
+    <div class="news-grid">
+
+        <article class="news-card">
+            <a href="Tanja Artikel.html">
+                <img src="Tanja .jpg" alt="In gesprek met Tanja Jadnanansing">
+                <h3 class="font-size-m">In gesprek met stadsdeelvoorzitter Tanja Jadnanansing</h3>
+                <p class="font-size-s">‘Besturen betekent niet alleen dat je in de driver’s seat zit ’</p>
+            </a>
+        </article>
+
+        <article class="news-card">
+            <a href="Artikel2.html">
+                <img src="Lang leven de flat.jpg" alt="Lang Leven Thuisflats project">
+                <h3 class="font-size-m">Onderwijs, onderzoek en praktijk komen samen</h3>
+                <p class="font-size-s">‘Ouderen langer zelfstandig laten wonen in sterke buurten’</p>
+            </a>
+        </article>
+
+        <article class="news-card">
+            <a href="artikel 3.html">
+                <img src="mohoektuin.JPG" alt="Motuin & Hoektuin">
+                <h3 class="font-size-m">Motuin & Hoektuin</h3>
+                <p class="font-size-s">“Een tuin heeft een positieve invloed op de samenleving”</p>
+            </a>
+        </article>
+
+</section>
+
+</main>
 
 <script src="script.js"></script>
 </body>

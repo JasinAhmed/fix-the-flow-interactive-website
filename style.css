@@ -1,86 +1,283 @@
+/* =========================================
+   BASIS INSTELLINGEN
+========================================= */
+
+* {
+    box-sizing: border-box;
+}
 
 body {
     margin: 0;
-    padding: 1rem;
-    font-family: Arial, sans-serif;
+    padding: 0;
+    max-width: 100%;
+    overflow-x: hidden;
+    font-family: "BuurtCampusArial-Regular", Arial, sans-serif;
 }
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+/* =========================================
+   HEADER (ORIGINEEL)
+========================================= */
 
 .header-main {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding: 18px 30px;
+    background: var(--color-lucht-blauw);
+    flex-wrap: wrap;
+    gap: 12px;
+    position: relative;
+    z-index: 10;
 }
 
-.site-title a {
-    text-decoration: none;
-    color: #000;
-    font-size: 1.6rem;
+.site-title a,
+.header-main h1 a {
+    font-family: "BuurtCampusArial-Bold", Arial;
+    font-size: 1.8rem;
+    text-transform: uppercase;
+    color: var(--color3);
 }
 
+/* =========================================
+   NAVLIST (ORIGINELE DESKTOP WEERGAVE)
+========================================= */
 
-/* Hamburger zichtbaar op mobiel */
-.hamburger {
-    font-size: 2rem;
-    padding: .4em .6em;
-    cursor: pointer;
-    border: 1px solid #000;
-    border-radius: 5px;
-}
-
-
-.navList {
-    display: none;
-    position: absolute;
-    top: 60px;
-    left: 1rem;
-    right: 1rem;
-    background: #fff;
-    padding: 1rem;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0,0,0,.1);
-}
-
-.navList ul {
+#navList {
+    display: flex;
+    gap: 40px;
     list-style: none;
     padding: 0;
     margin: 0;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
-.navList li + li {
-    margin-top: .5rem;
+/* =========================================
+   NIEUWS + ARCHIEF
+========================================= */
+
+.news-and-form {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 30px 20px;
 }
 
-.navList a {
-    text-decoration: none;
-    color: #000;
+.news-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
+.archief-btn {
+    padding: 8px 16px;
+    border: 2px solid var(--color3);
+    border-radius: 6px;
+    font-weight: bold;
+    color: var(--color3);
+}
 
-.navList.open {
+/* =========================================
+   NIEUWS GRID
+========================================= */
+
+.news-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 50px;
+    margin-top: 50px;
+}
+
+.news-card {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.news-card img {
+    height: 240px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+/* =========================================
+   ARTIKEL PAGINA
+========================================= */
+
+.pagina-titel {
+    max-width: 900px;
+    margin: 25px auto;
+    padding: 0 20px;
+    font-size: 2rem;
+    line-height: 1.3;
+}
+
+.artikel-foto {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.artikel-foto img {
+    border-radius: 12px;
+    max-height: 420px;
+    object-fit: cover;
+}
+
+.artikel-tekstblok {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
+    font-size: 1.1rem;
+    line-height: 1.55;
+}
+
+.blockquote1 {
+    max-width: 700px;
+    margin: 30px auto;
+    text-align: center;
+    font-weight: bold;
+    font-size: 1.4rem;
+}
+
+/* =========================================
+   FORMULIER
+========================================= */
+
+.reactie-titel {
+    text-align: center;
+}
+
+.contact-form {
+    max-width: 550px;
+    margin: 20px auto 60px;
+    background: var(--color-lucht-blauw);
+    padding: 30px;
+    border-radius: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.input-field,
+.textarea-input-field {
+    width: 100%;
+    padding: 12px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+}
+
+/* =========================================
+   DECORATIE LINKS & RECHTS
+========================================= */
+
+.decoratie-links,
+.decoratie-rechts {
+    position: fixed;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    pointer-events: none;
+    z-index: 1;
+}
+
+/* =========================================
+   MOBIEL-FIRST HEADER + MENU (NIEUW)
+========================================= */
+
+/* ----- MOBIEL STANDAARD ----- */
+
+/* header compact op 320px */
+.header-main {
+    padding: 14px 16px;
+}
+
+/* logo kleiner voor mobiele breedtes */
+.site-title a {
+    font-size: 1.4rem;
+}
+
+/* hamburger zichtbaar op mobiel */
+.hamburger {
+    font-size: 2rem;
+    background: none;
+    border: none;
+    cursor: pointer;
     display: block;
+    color: #333;
+    transition: 0.3s;
 }
 
+/* hamburger → kruis */
+.hamburger.open {
+    transform: rotate(90deg);
+    color: red;
+}
 
-@media (min-width: 768px) {
+/* popup menu op mobiel */
+#navList {
+    display: none;
+    flex-direction: column;
+    gap: 15px;
 
+    background: white;
+    padding: 16px;
+    border-radius: 12px;
+
+    position: absolute;
+    top: 60px;
+    left: 10px;
+    right: 10px;
+
+    transform: translateY(-10px);
+    opacity: 0;
+    transition: transform 0.25s ease, opacity 0.25s ease;
+
+    box-shadow: 0 6px 20px rgba(0,0,0,0.12);
+    z-index: 999;
+}
+
+/* open popup menu */
+#navList.open {
+    display: flex !important;
+    transform: translateY(0px);
+    opacity: 1;
+}
+
+/* ----- TABLET & DESKTOP ----- */
+@media (min-width: 601px) {
+
+    /* hamburger verdwijnt */
     .hamburger {
-        display: none;
+        display: none !important;
     }
 
-    .navList {
-        display: block;
+    /* originele desktop navigatie */
+    #navList {
+        display: flex !important;
+        flex-direction: row;
         position: static;
-        box-shadow: none;
-        padding: 0;
         background: none;
+        padding: 0;
+        opacity: 1;
+        transform: none;
+        box-shadow: none;
+        gap: 40px;
     }
 
-    .navList ul {
-        display: flex;
-        gap: 1rem;
-    }
-
-    .navList li + li {
-        margin-top: 0;
+    .site-title a {
+        font-size: 1.8rem;
     }
 }
