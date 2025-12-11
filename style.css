@@ -1,6 +1,6 @@
-/* =========================================
-   BASIS INSTELLINGEN
-========================================= */
+
+   /* BASIS INSTELLINGEN */
+
 
 * {
     box-sizing: border-box;
@@ -25,9 +25,8 @@ img {
     height: auto;
 }
 
-/* =========================================
-   HEADER (MOBILE FIRST)
-========================================= */
+
+   /* HEADER */
 
 .header-main {
     display: flex;
@@ -49,9 +48,9 @@ img {
     color: var(--color3);
 }
 
-/* =========================================
-   HAMBURGER MENU (NIEUW + MOOIER)
-========================================= */
+
+   /* HAMBURGER MENU */
+
 
 .hamburger {
     width: 35px;
@@ -74,9 +73,9 @@ img {
     transition: 0.35s ease;
 }
 
-/* ANIMATIE: 3 streepjes → X */
+/* ANIMATIE:X via MDN */
 .hamburger.open span:nth-child(1) {
-    transform: translateY(9px) rotate(45deg);
+    transform: translateY(7px) rotate(45deg);
 }
 
 .hamburger.open span:nth-child(2) {
@@ -87,9 +86,10 @@ img {
     transform: translateY(-9px) rotate(-45deg);
 }
 
-/* =========================================
-   NAVIGATIE (MOBILE FIRST)
-========================================= */
+
+
+   /* NAVIGATIE */
+
 
 #navList {
     display: none;
@@ -120,9 +120,9 @@ img {
     opacity: 1;
 }
 
-/* =========================================
-   NIEUWS + ARCHIEF
-========================================= */
+
+   /* NIEUWS + ARCHIEF */
+
 
 .news-and-form {
     max-width: 1200px;
@@ -144,9 +144,8 @@ img {
     color: var(--color3);
 }
 
-/* =========================================
-   NIEUWS GRID
-========================================= */
+   /* NIEUWS GRID */
+
 
 .news-grid {
     display: grid;
@@ -167,9 +166,9 @@ img {
     border-radius: 10px;
 }
 
-/* =========================================
-   ARTIKEL PAGINA
-========================================= */
+
+   /* ARTIKEL PAGINA */
+
 
 .pagina-titel {
     max-width: 900px;
@@ -207,9 +206,8 @@ img {
     font-size: 1.4rem;
 }
 
-/* =========================================
-   FORMULIER
-========================================= */
+   /* FORMULIER */
+
 
 .contact-form {
     max-width: 550px;
@@ -230,9 +228,9 @@ img {
     border: 1px solid #ccc;
 }
 
-/* =========================================
-   DECORATIE
-========================================= */
+
+   /* DECORATIE */
+
 
 .decoratie-links,
 .decoratie-rechts {
@@ -246,9 +244,8 @@ img {
     z-index: 1;
 }
 
-/* =========================================
-   TYPOGRAFIE SITE
-========================================= */
+   /* TYPOGRAFIE SITE */
+
 
 .news-card h3 {
     font-family: var(--font-body);
@@ -279,9 +276,9 @@ img {
     font-weight: 600;
 }
 
-/* =========================================
-   DESKTOP BREAKPOINT
-========================================= */
+
+   /* DESKTOP BREAKPOINT */
+
 
 @media (min-width: 601px) {
     .hamburger {
