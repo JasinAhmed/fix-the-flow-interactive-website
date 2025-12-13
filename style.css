@@ -3,7 +3,9 @@
 :root {
     --color-lucht-blauw: rgb(180, 189, 208);
     --color-zee: rgb(8, 91, 100);
-    --color3: rgb(51, 52, 103); /* blauw zoals voorbeeld */
+    --color3: rgb(51, 52, 103);
+    --color4: rgb(109, 125, 57);
+    --color6: rgb(255, 255, 255);
     --color-wit: #ffffff;
     --color-grijs: #333;
 }
@@ -18,7 +20,7 @@ body {
     max-width: 100%;
     overflow-x: hidden;
     font-family: "BuurtCampusArial-Regular", Arial, sans-serif;
-    color: var(--color3); /* tekst standaard blauw */
+    color: var(--color3);
 }
 
 a {
@@ -329,4 +331,37 @@ img {
     .home-video {
         padding: 50px 20px;
     }
+}
+
+
+/* GEBIED-KLEUREN (HEADER) */
+
+.header-zuidoost {
+    background-color: var(--color-zee) !important;
+    color: var(--color6) !important;
+}
+
+.header-zuidoost h1 a,
+.header-zuidoost #navList a {
+    color: var(--color6) !important;
+}
+
+.header-oost {
+    background-color: var(--color3) !important;
+    color: var(--color6) !important;
+}
+
+.header-oost h1 a,
+.header-oost #navList a {
+    color: var(--color6) !important;
+}
+
+.header-nieuw-west {
+    background-color: var(--color4) !important;
+    color: var(--color6) !important;
+}
+
+.header-nieuw-west h1 a,
+.header-nieuw-west #navList a {
+    color: var(--color6) !important;
 }
