@@ -287,14 +287,29 @@ img {
 
 .decoratie-links,
 .decoratie-rechts {
-    position: fixed;
-    top: 50%;
-    transform: translateY(-50%);
+    position: absolute;      /* 👈 NIET fixed, scrolt gewoon mee */
+    top: 180px;              /* start onder de header */
     display: flex;
     flex-direction: column;
     gap: 14px;
+
+    width: 120px;
     pointer-events: none;
-    z-index: 1;
+    z-index: 0;
+}
+
+.decoratie-links {
+    left: 20px;
+}
+
+.decoratie-rechts {
+    right: 20px;
+}
+
+.decoratie-links img,
+.decoratie-rechts img {
+    width: 100%;
+    height: auto;
 }
 
 

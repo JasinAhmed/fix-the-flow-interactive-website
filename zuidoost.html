@@ -13,14 +13,12 @@
 </head>
 <body>
 
-<!-- ======================= HEADER ======================= -->
 <header class="header-main header-zuidoost">
 
     <h1 class="site-title">
         <a href="index.html">Buurtcampuskrant</a>
     </h1>
 
-    <!-- HAMBURGER BUTTON -->
     <button class="hamburger" aria-label="Open navigatie">
         <span></span>
         <span></span>
@@ -29,26 +27,35 @@
 
     <nav class="navList">
         <ul id="navList">
-            <li><a class="navKnop font-size-l" href="zuidoost.html">Zuidoost</a></li>
-            <li><a class="navKnop font-size-l" href="oost.html">Oost</a></li>
-            <li><a class="navKnop font-size-l" href="nieuw-west.html">Nieuw-West</a></li>
+            <li>
+                <a class="navKnop font-size-l" href="zuidoost.html" aria-current="page">
+                    Zuidoost
+                </a>
+            </li>
+            <li>
+                <a class="navKnop font-size-l" href="oost.html">
+                    Oost
+                </a>
+            </li>
+            <li>
+                <a class="navKnop font-size-l" href="nieuw-west.html">
+                    Nieuw-West
+                </a>
+            </li>
         </ul>
     </nav>
 
 </header>
 
 <main>
-
     <h2 class="buurt-titel font-size-xl">Artikelen uit Zuidoost</h2>
 
-    <!-- FILTER BLOK van internet -->
     <div class="filter-box">
         <a href="#" class="filter-item">HvA medewerkers →</a>
         <a href="#" class="filter-item">Bewoners →</a>
         <a href="#" class="filter-item">Studenten →</a>
         <a href="#" class="filter-item">Wijkpartners →</a>
     </div>
-
 </main>
 
 <script src="script.js"></script>
