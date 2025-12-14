@@ -380,3 +380,48 @@ img {
 .header-nieuw-west #navList a {
     color: var(--color6) !important;
 }
+
+
+/* ========================================= */
+/* TOEVOEGING: HOVER EFFECT HEADER NAV        */
+/* ========================================= */
+
+.header-zuidoost #navList a,
+.header-oost #navList a,
+.header-nieuw-west #navList a {
+    transition: color 0.25s ease;
+}
+
+.header-zuidoost #navList a:hover,
+.header-oost #navList a:hover,
+.header-nieuw-west #navList a:hover {
+    color: var(--color-lucht-blauw);
+}
+
+.header-zuidoost #navList a:focus-visible,
+.header-oost #navList a:focus-visible,
+.header-nieuw-west #navList a:focus-visible {
+    color: var(--color-lucht-blauw);
+    outline: none;
+}
+
+
+/* GEBIEDS-GEBONDEN HOVER KLEUREN (HEADER)   */
+
+/* ZUIDOOST */
+.header-zuidoost #navList a:hover,
+.header-zuidoost #navList a:focus-visible {
+    color: var(--color-zee) !important;
+}
+
+/* OOST */
+.header-oost #navList a:hover,
+.header-oost #navList a:focus-visible {
+    color: var(--color3) !important;
+}
+
+/* NIEUW-WEST */
+.header-nieuw-west #navList a:hover,
+.header-nieuw-west #navList a:focus-visible {
+    color: var(--color4) !important;
+}
