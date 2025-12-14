@@ -9,3 +9,4 @@ hamburger.addEventListener("click", function () {
   navList.classList.toggle("open");
   hamburger.classList.toggle("open");
 });
+

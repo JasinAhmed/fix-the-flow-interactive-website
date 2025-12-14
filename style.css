@@ -83,7 +83,7 @@ img {
 
 /* ANIMATIE:X via MDN */
 .hamburger.open span:nth-child(1) {
-    transform: translateY(7px) rotate(45deg);
+    transform: translateY(10px) rotate(45deg);
 }
 
 .hamburger.open span:nth-child(2) {
@@ -91,7 +91,7 @@ img {
 }
 
 .hamburger.open span:nth-child(3) {
-    transform: translateY(-9px) rotate(-45deg);
+    transform: translateY(-2px) rotate(-45deg);
 }
 
 
@@ -473,3 +473,188 @@ img {
         height: 2px;
     }
 }
+/* ========================================= */
+/* TOEVOEGING: HEADER DECORATIE (TABLET+)    */
+/* ========================================= */
+
+/* STANDAARD: NIET ZICHTBAAR (MOBIEL) */
+.header-decoratie {
+    display: none;
+}
+
+/* TABLET & DESKTOP */
+@media (min-width: 600px) {
+
+    .header-decoratie {
+        display: block;
+        position: absolute;
+        inset: 0;
+        pointer-events: none;
+        z-index: 1;
+    }
+
+    /* Zorg dat logo + menu erboven blijven */
+    .header-main > *:not(.header-decoratie) {
+        position: relative;
+        z-index: 2;
+    }
+
+    /* ALGEMEEN */
+    .header-decoratie img {
+        position: absolute;
+        height: auto;
+    }
+
+    /* WOLKEN */
+    .wolk {
+        width: 90px;
+        opacity: 0.85;
+    }
+
+    .wolk-1 {
+        top: px;
+        left: 280px;
+    }
+
+    .wolk-2 {
+        top: 5px;
+        right: 160px;
+    }
+
+    /* VOGELS */
+    .vogel {
+        width: 42px;
+    }
+
+    .vogel-1 {
+        top: 14px;
+        left: 340px;
+    }
+
+    .vogel-2 {
+        top: 42px;
+        right: 210px;
+    }
+}
+
+/* DESKTOP GROTER */
+@media (min-width: 1024px) {
+
+    .wolk {
+        width: 120px;
+    }
+
+    .vogel {
+        width: 50px;
+    }
+}
+/* ========================================= */
+/* FIX: VOGELS RICHTING + AFSTAND            */
+/* ========================================= */
+
+@media (min-width: 600px) {
+
+    /* WOLKEN – MEER RUIMTE */
+    .wolk-1 {
+        top: 6px;
+        left: 42%;
+    }
+
+    .wolk-2 {
+        top: 12px;
+        left: 70%;
+    }
+
+    /* VOGELS – LOS VAN WOLKEN */
+    .vogel-1 {
+        top: 38px;
+        left: 48%;
+        transform: scaleX(-1); /* kijkt naar links */
+    }
+
+    .vogel-2 {
+        top: 42px;
+        left: 76%;
+        transform: scaleX(1);  /* kijkt naar rechts */
+    }
+}
+/* ========================================= */
+/* FIX: DECORATIE MEER NAAR HET MIDDEN        */
+/* ========================================= */
+
+@media (min-width: 600px) {
+
+    /* WOLKEN – MEER CENTRAAL */
+    .wolk-1 {
+        top: 6px;
+        left: 45%;
+    }
+
+    .wolk-2 {
+        top: 10px;
+        left: 60%;
+    }
+
+    /* VOGELS – ONDER WOLKEN, WEG VAN NAV */
+    .vogel-1 {
+        top: 40px;
+        left: 48%;
+        transform: scaleX(-1); /* kijkt naar links */
+    }
+
+    .vogel-2 {
+        top: 44px;
+        left: 62%;
+        transform: scaleX(1); /* kijkt naar rechts */
+    }
+}
+/* ========================================= */
+/* FIX: DECORATIE ECHT IN HET MIDDEN (LOGO)  */
+/* ========================================= */
+
+@media (min-width: 600px) {
+
+    /* HEADER ALS REFERENTIE */
+    .header-main {
+        position: relative;
+    }
+
+    /* DECORATIE-CONTAINER */
+    .header-decoratie {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        pointer-events: none;
+    }
+
+    /* WOLKEN – BOVEN LOGO */
+    .wolk-1 {
+        position: absolute;
+        top: 6px;
+        left: 38%;
+    }
+
+    .wolk-2 {
+        position: absolute;
+        top: 10px;
+        left: 52%;
+    }
+
+    /* VOGELS – ONDER WOLKEN, RONDOM LOGO */
+    .vogel-1 {
+        position: absolute;
+        top: 42px;
+        left: 41%;
+        transform: scaleX(-1); /* kijkt naar links */
+    }
+
+    .vogel-2 {
+        position: absolute;
+        top: 46px;
+        left: 55%;
+        transform: scaleX(1);  /* kijkt naar rechts */
+    }
+}
+ 
