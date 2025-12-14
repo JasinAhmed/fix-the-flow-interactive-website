@@ -425,3 +425,51 @@ img {
 .header-nieuw-west #navList a:focus-visible {
     color: var(--color4) !important;
 }
+
+
+/* FIX: HAMBURGER ECHT IN DE HOEK (MOBIEL)   */
+
+
+@media (max-width: 600px) {
+
+    .header-main {
+        position: relative;
+        flex-wrap: nowrap;
+    }
+
+    .hamburger {
+        position: absolute;
+        top: 50%;
+        right: 16px;
+        transform: translateY(-50%);
+        margin-left: 0;
+    }
+
+    .site-title,
+    .header-main h1 {
+        white-space: nowrap;
+    }
+}
+
+
+/* FIX: EXTRA KLEIN SCHERM (320px)           */
+
+
+@media (max-width: 340px) {
+
+    .site-title a,
+    .header-main h1 a {
+        font-size: 1.05rem;
+        letter-spacing: 0.5px;
+    }
+
+    .hamburger {
+        right: 8px;
+        width: 28px;
+        height: 20px;
+    }
+
+    .hamburger span {
+        height: 2px;
+    }
+}
