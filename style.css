@@ -358,27 +358,27 @@ img {
 
 .header-zuidoost h1 a,
 .header-zuidoost #navList a {
-    color: var(--color6) !important;
+    color: var(--color-zee) !important;
 }
 
 .header-oost {
     background-color: var(--color3) !important;
-    color: var(--color6) !important;
+    color: var(--color3) !important;
 }
 
 .header-oost h1 a,
 .header-oost #navList a {
-    color: var(--color6) !important;
+    color: var(--color3) !important;
 }
 
 .header-nieuw-west {
     background-color: var(--color4) !important;
-    color: var(--color6) !important;
+    color: var(--color4) !important;
 }
 
 .header-nieuw-west h1 a,
 .header-nieuw-west #navList a {
-    color: var(--color6) !important;
+    color: var(--color4) !important;
 }
 
 
@@ -657,4 +657,12 @@ img {
         transform: scaleX(1);  /* kijkt naar rechts */
     }
 }
- 
+/* ===================================================== */
+/* FIX: LOGO TEKST ALTIJD CONTRAST OP BUURT-PAGINA'S     */
+/* ===================================================== */
+
+.header-zuidoost .site-title a,
+.header-oost .site-title a,
+.header-nieuw-west .site-title a {
+    color: #ffffff !important;
+}
