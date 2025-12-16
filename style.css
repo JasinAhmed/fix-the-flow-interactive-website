@@ -689,190 +689,28 @@ img {
         max-width: 800px;      /* COMPUTER: niet te groot */
     }
 }
-.buurt-nav {
-    display: flex;
-    gap: 16px;
-    flex-wrap: wrap;
-    margin: 12px 20px 30px;
-    font-weight: 600;
-}
 
-.buurt-nav a {
-    color: var(--color3);
-}
-
-.buurt-nav a:hover {
-    text-decoration: underline;
-}
-/* ================= BUURT NAV KLEUR PER PAGINA ================= */
-
-/* ALGEMEEN: buurt-links WIT */
-.header-algemeen #navList a {
-    color: #ffffff !important;
-}
-
-/* BUURT-PAGINA'S: buurt-links ZWART */
-.header-zuidoost #navList a,
-.header-oost #navList a,
-.header-nieuw-west #navList a {
-    color: #000000 !important;
-}
-/* ================= BASIS ================= */
-.header-main {
-  position: relative;
-  overflow: hidden;
-  background-color: #c7cfdf;
-}
-
-/* Decoratie container */
-.header-decoratie {
-  position: absolute;
-  inset: 0;
-  pointer-events: none;
-}
-
-/* ================= WOLKEN ================= */
-@keyframes wolk-naar-rechts {
-  from {
-    transform: translateX(-200px);
-  }
-  to {
-    transform: translateX(110vw);
-  }
-}
-
+/* Basis */
 .wolk {
   position: absolute;
-  width: 80px;
-  opacity: 0.85;
-  animation: wolk-naar-rechts 90s linear infinite;
+  will-change: transform;
 }
 
-.wolk-1 {
-  top: 10px;
-  animation-duration: 80s;
+/* Bewegen bij hover */
+.header-main:hover .wolk-1 {
+  animation: wolkDoor 6s linear infinite;
 }
 
-.wolk-2 {
-  top: 35px;
-  animation-duration: 110s;
+.header-main:hover .wolk-2 {
+  animation: wolkDoor 9s linear infinite;
 }
 
-/* ================= VOGELS ================= */
-@keyframes vogel-links-rechts {
+/* Van links naar rechts door het beeld */
+@keyframes wolkDoor {
   from {
     transform: translateX(-150px);
   }
   to {
     transform: translateX(110vw);
   }
-}
-
-@keyframes vogel-rechts-links {
-  from {
-    transform: translateX(110vw) scaleX(-1);
-  }
-  to {
-    transform: translateX(-150px) scaleX(-1);
-  }
-}
-
-.vogel {
-  position: absolute;
-  width: 45px;
-}
-
-/* Vogel 1 → links naar rechts */
-.vogel-links {
-  top: 55px;
-  animation: vogel-links-rechts 22s linear infinite;
-}
-
-/* Vogel 2 → rechts naar links */
-.vogel-rechts {
-  top: 80px;
-  animation: vogel-rechts-links 28s linear infinite;
-}
-.vogel,
-.wolk {
-  position: absolute;
-  top: 40px; /* of wat je wilt */
-  will-change: transform;
-}
-.header-main {
-  position: relative;
-  overflow: hidden;
-}
-
-.header-decoratie {
-  position: absolute;
-  inset: 0;
-  pointer-events: none;
-}
-
-.vogel {
-  position: absolute;
-  top: 55px;
-  width: 45px;
-}
-
-.vogel-rechts {
-  top: 80px;
-}
-
-.wolk {
-  position: absolute;
-  top: 20px;
-  width: 80px;
-  opacity: 0.85;
-}
-/* ================= VOGEL CLICK ACTIE ================= */
-.vogel {
-  cursor: pointer;
-  transition: transform 1s ease-out;
-}
-
-/* Wegvliegen naar rechts */
-.vogel.vlieg-rechts {
-  transform: translateX(400px);
-}
-
-/* Wegvliegen naar links */
-.vogel.vlieg-links {
-  transform: translateX(-400px);
-}
-/* Algemene vogel */
-.vogel {
-  position: absolute;
-  width: 45px;
-  top: 45%;              /* basis: midden van de header */
-  transform: translateY(-50%);
-  cursor: pointer;
-}
-
-/* Vogel links (iets hoger) */
-.vogel-links {
-  top: 42%;
-}
-
-/* Vogel rechts (was te laag → nu gelijk) */
-.vogel-rechts {
-  top: 42%;
-}
-/* Alleen animatie bij klik */
-.vogel.vlieg-rechts {
-  transform: translateX(400px);
-  transition: transform 1s ease-out;
-}
-
-.vogel.vlieg-links {
-  transform: translateX(-400px);
-  transition: transform 1s ease-out;
-}
-.header-decoratie {
-  pointer-events: none;
-}
-
-.vogel {
-  pointer-events: auto;
 }
