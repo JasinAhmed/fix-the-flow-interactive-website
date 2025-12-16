@@ -5,43 +5,37 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Zuidoost – Buurtcampuskrant</title>
 
-    <!-- STYLEGUIDE -->
     <link rel="stylesheet" href="https://toasterbath0758.github.io/look-and-feel-styleguide-BCK/styleguide-buurtcampuskrant.css">
-
-    <!-- JOUW CSS -->
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
 <header class="header-main header-zuidoost">
 
-    <h1 class="site-title">
-        <a href="index.html">Buurtcampuskrant</a>
-    </h1>
+    <div class="header-left">
+        <h1 class="site-title">
+            <a href="index.html">Buurtcampuskrant</a>
+        </h1>
+    </div>
 
+    <!-- DESKTOP NAV -->
+    <nav class="header-right">
+        <a href="zuidoost.html" class="active">Zuidoost</a>
+        <a href="oost.html">Oost</a>
+        <a href="nieuw-west.html">Nieuw-West</a>
+    </nav>
+
+    <!-- HAMBURGER -->
     <button class="hamburger" aria-label="Open navigatie">
-        <span></span>
-        <span></span>
-        <span></span>
+        <span></span><span></span><span></span>
     </button>
 
+    <!-- MOBIEL NAV -->
     <nav class="navList">
         <ul id="navList">
-            <li>
-                <a class="navKnop font-size-l" href="zuidoost.html" aria-current="page">
-                    Zuidoost
-                </a>
-            </li>
-            <li>
-                <a class="navKnop font-size-l" href="oost.html">
-                    Oost
-                </a>
-            </li>
-            <li>
-                <a class="navKnop font-size-l" href="nieuw-west.html">
-                    Nieuw-West
-                </a>
-            </li>
+            <li><a href="zuidoost.html" aria-current="page">Zuidoost</a></li>
+            <li><a href="oost.html">Oost</a></li>
+            <li><a href="nieuw-west.html">Nieuw-West</a></li>
         </ul>
     </nav>
 
