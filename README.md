@@ -13,7 +13,6 @@ Als gebruiker wil ik dat het hoofdmenu overzichtelijk wordt gepresenteerd, zodat
 <!-- Voeg een link toe naar Github Pages 🌐-->
 Klik [hier](https://jasinahmed.github.io/fix-the-flow-interactive-website/) om de website zelf te bekijken!
 
-<img width="1800" height="760" alt="3-devices-black" src="https://github.com/user-attachments/assets/16e29e92-8d50-42b1-b280-8062975ce754" />
 
 De Buurtcampuskrant is een door HvA-studenten gemaakte website wat de inhoud van de fysieke Buurtcampuskrant mooi op een website weergeeft.Deze sprint heb ik gewerkt aan de navigatie van de website door het ontwerpen en implementeren van een hamburger menu, waarmee gebruikers eenvoudig door de pagina’s kunnen navigeren.
 
