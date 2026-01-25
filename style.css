@@ -382,9 +382,9 @@ img {
 }
 
 
-/* ========================================= */
-/* TOEVOEGING: HOVER EFFECT HEADER NAV        */
-/* ========================================= */
+
+/* TOEVOEGING: HOVER EFFECT HEADER NAV */
+
 
 .header-zuidoost #navList a,
 .header-oost #navList a,
@@ -473,9 +473,9 @@ img {
         height: 2px;
     }
 }
-/* ========================================= */
+
 /* TOEVOEGING: HEADER DECORATIE (TABLET+)    */
-/* ========================================= */
+
 
 /* STANDAARD: NIET ZICHTBAAR (MOBIEL) */
 .header-decoratie {
@@ -548,9 +548,8 @@ img {
         width: 50px;
     }
 }
-/* ========================================= */
+
 /* FIX: VOGELS RICHTING + AFSTAND            */
-/* ========================================= */
 
 @media (min-width: 600px) {
 
@@ -714,3 +713,25 @@ img {
     transform: translateX(110vw);
   }
 }
+
+/* FIX: MENU LINKS ALTIJD ZICHTBAAR */
+  
+.header-zuidoost #navList a,
+.header-oost #navList a,
+.header-nieuw-west #navList a {
+  color: #fff !important;
+}
+
+/*  duidelijke hover */
+.header-zuidoost #navList a:hover,
+.header-oost #navList a:hover,
+.header-nieuw-west #navList a:hover,
+.header-zuidoost #navList a:focus-visible,
+.header-oost #navList a:focus-visible,
+.header-nieuw-west #navList a:focus-visible {
+  color: var(--color-lucht-blauw) !important;
+  outline: none;
+}
+
+/* (aanrader) geen bullets */
+#navList { list-style: none; margin: 0; padding: 0; }
